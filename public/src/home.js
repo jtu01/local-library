@@ -14,7 +14,7 @@ function booksBorrowedCount(books) {
 function getMostCommonGenres(books) {
   // get list of genres
   let genreList = []
-  books.forEach(book => genreList.push(book.genre))
+  genreList = books.map((book) => book.genre)
 
   // reduce list of genres and get count
   let countedGenres = genreList.reduce(function (genres, genre) {

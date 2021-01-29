@@ -1,9 +1,14 @@
+// helper function
+function findById(arr, id) {
+  return arr.find(arrId => arrId["id"] === id)
+} 
+
 function findAuthorById(authors, id) {
-  return authors.find(authorId => authorId["id"] === id)
+  return findById(authors, id)
 }
 
 function findBookById(books, id) {
-  return books.find(bookId => bookId["id"] === id)
+  return findById(books, id)
 }
 
 function partitionBooksByBorrowedStatus(books) {
